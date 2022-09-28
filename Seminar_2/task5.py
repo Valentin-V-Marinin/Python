@@ -1,8 +1,6 @@
 # Реализуйте алгоритм перемешивания списка. Без функции shuffle из модуля random.
 
-from random import random, randrange
-from tkinter import N
-
+from random import randrange
 
 number = int(input('Введите количество элементов списка: '))
 basis = []

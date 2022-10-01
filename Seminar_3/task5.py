@@ -13,7 +13,6 @@ def Fibonacci(num: int):
         else:    
             basis.insert(0, basis[1] - basis[0])
             basis.append(basis[-2] + basis[-1])
-            #basis.append(basis[len(basis)-2] + basis[len(basis)-1])
     return basis
 
 print(Fibonacci(number))

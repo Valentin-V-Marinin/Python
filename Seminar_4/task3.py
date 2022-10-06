@@ -8,8 +8,11 @@ number = int(input('Введите количество элементов сп�
 
 def random_list(numb):
     result = []
-    for i in range(numb): 
-        result.append(randrange(0,numb))
+    if numb >= 0:     
+        for i in range(numb): 
+            result.append(randrange(0,numb))
+    else:
+        print('Negative value of the number of numbers!')
     return result    
 
 def result_list(mylist : list):

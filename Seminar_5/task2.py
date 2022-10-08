@@ -5,7 +5,7 @@ from random import randint, randrange
 from secrets import choice
 
 
-def text_file_ctreation():
+def text_file_creation():
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     with open(input('File name: '),'a') as f:
         for i in range(randint(2,10)):
@@ -52,6 +52,6 @@ def file_decoding():
         write_file.close
     
 
-text_file_ctreation() # v.txt
+text_file_creation()  # v.txt
 file_encoding()       # v.txt
 file_decoding()       # enc_v.txt

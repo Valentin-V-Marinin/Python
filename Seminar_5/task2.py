@@ -15,8 +15,6 @@ def text_file_ctreation():
                 new_line+= choice(alphabet)*randrange(1,11)
                 line_length_counter+= len(new_line)
             f.write(new_line + "\n")
-            line_length_counter = 0
-            new_line = ""
          
 
 def file_encoding():

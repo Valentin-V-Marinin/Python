@@ -4,18 +4,20 @@
 from random import sample
 from itertools import islice
 
-def edit_list():
-    basis = [i for i in sample(range(0,50),k=12)]
+number = int(input('Введите число элементов: '))
+
+def edit_list(numb: int):
+    basis = [i for i in sample(range(0,50),k=numb)]
     print(basis)
     return [x for x, y in zip( (islice(basis,1,None)), (islice(basis,0,len(basis)-1)) ) if x > y ]
 
-def edit_list_1():
-    basis = [i for i in sample(range(0,50),k=12)]
+def edit_list_1(numb: int):
+    basis = [i for i in sample(range(0,50),k=numb)]
     print(basis)
     return [x for x, y in zip( basis[1:len(basis)], basis[0:len(basis)-1] ) if x > y ]
 
-def edit_list_2():
-    basis = [i for i in sample(range(0,50),k=12)]
+def edit_list_2(numb: int):
+    basis = [i for i in sample(range(0,50),k=numb)]
     result = []
     count = len(basis)
     i = 0
@@ -30,6 +32,6 @@ def edit_list_2():
     print(basis)
     return result
 
-print(edit_list())
-print(edit_list_1())
-print(edit_list_2())
+print(edit_list(number))
+print(edit_list_1(number))
+print(edit_list_2(number))

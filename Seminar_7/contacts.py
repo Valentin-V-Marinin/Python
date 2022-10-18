@@ -9,7 +9,7 @@ def add_new_contact():
     print('Добавление нового контакта в телефонный справочник')
     family_contact = input('Введите фамилию контакта (2-20 символов):')
     name_contact = input('Введите имя контакта (2-15 символов):')
-    phone_number = int(input('Введите телефон контакта (3 - 11 символов):'))
+    phone_number = input('Введите телефон контакта (3 - 11 символов):')
     description = input('Введите описание:')
     if not check_name(family_contact+name_contact):
         permission = False

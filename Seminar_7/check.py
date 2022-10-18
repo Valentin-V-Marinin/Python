@@ -1,4 +1,4 @@
-from curses.ascii import isdigit
+
 
 
 def check_ui(sign, func):
@@ -35,8 +35,8 @@ def check_name(name: str):
     return result
 
 def check_length(family_contact,name_contact,phone_number):
-    result = True
-    if 2 <= family_contact <= 20: result = False
-    if 2 <= name_contact <= 15: result = False
-    if 3 <= phone_number <= 11: result = False
+    result = False
+    if 2 <= len(family_contact) <= 20: result = True
+    if 2 <= len(name_contact) <= 15: result = True
+    if 3 <= len(str(phone_number)) <= 11: result = True
     return result

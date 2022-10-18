@@ -10,7 +10,7 @@ def main():
         act = main_ui()
         if act == 1: 
             screen()
-            add_new_contact()
+            act = add_new_contact()
             screen() 
         if act == 2: 
             screen()

@@ -6,9 +6,13 @@ def check_ui(sign, func):
         if (func == 'main'):
             if 0 <= int(sign) < 4:
                 return int(sign)
+            else:
+                return 100
         if (func == 'aux'):
             if 0 <= int(sign) < 2:
                 return int(sign)
+            else:
+                return 100
     else:
         return 100
     

@@ -1,3 +1,5 @@
+from os import path
+
 def write_data(data: str):
     with open('phone_book.csv', 'a') as f:
         f.writelines(data + '\n')
@@ -5,11 +7,12 @@ def write_data(data: str):
 
 def read_data(all_contacts: bool, data=""):
     phone_books = []
-    with open('phone_book.csv', 'r') as f:
-        if all_contacts:
-            [phone_books.append(i) for i in f]
-        else:
-            [phone_books.append(i) for i in f if data in i]
+    if path.exists('phone_book.csv'):
+        with open('phone_book.csv', 'r') as f:
+            if all_contacts:
+                [phone_books.append(i) for i in f]
+            else:
+                [phone_books.append(i) for i in f if data in i]
     return phone_books
 
 
